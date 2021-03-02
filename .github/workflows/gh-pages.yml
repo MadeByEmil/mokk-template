@@ -35,8 +35,8 @@ jobs:
           printf "\nBuilding … \n" && dokkoo build .
           cd ../
           cp -ar ./mokk/output/* ./gh-pages
-          if [ -f "./gh-pages/postbuild.sh" ]; then
-              chmod +x ./gh-pages/postbuild.sh && ./gh-pages/postbuild.sh
+          if [ -f "./mokk/postbuild.sh" ]; then
+              chmod +x ./mokk/postbuild.sh && ./mokk/postbuild.sh
           fi
           touch ./gh-pages/.nojekyll
           tee -a ./gh-pages/.nojekyll > /dev/null <<EOT
